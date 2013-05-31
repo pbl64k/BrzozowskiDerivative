@@ -522,20 +522,20 @@
 						BdParserPromise::makeEpsilon());
 			});
 
-	//test($exp->parse(SimpleStringBdParserInput::make('')), TRUE);
-	//test($exp->parse(SimpleStringBdParserInput::make('.')), TRUE);
-	//test($exp->parse(SimpleStringBdParserInput::make('...............')), TRUE);
-	//test($exp->parse(SimpleStringBdParserInput::make(',')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make(',.')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('.,')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make(',,,')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('.,.')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make(',,.....,,......,,')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make(str_repeat('.', 100))), TRUE);
-	//test($exp->parse(SimpleStringBdParserInput::make(','.str_repeat('.', 100))), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('.,'.str_repeat('.', 100))), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make(str_repeat('.', 100).',')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make(str_repeat('.', 100).',.')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('')), TRUE);
+	test($exp->parse(SimpleStringBdParserInput::make('.')), TRUE);
+	test($exp->parse(SimpleStringBdParserInput::make('...............')), TRUE);
+	test($exp->parse(SimpleStringBdParserInput::make(',')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make(',.')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('.,')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make(',,,')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('.,.')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make(',,.....,,......,,')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make(str_repeat('.', 100))), TRUE);
+	test($exp->parse(SimpleStringBdParserInput::make(','.str_repeat('.', 100))), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('.,'.str_repeat('.', 100))), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make(str_repeat('.', 100).',')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make(str_repeat('.', 100).',.')), FALSE);
 	/*
 	*/
 
@@ -562,26 +562,24 @@
 						BdParserPromise::makeEpsilon());
 			});
 
-	//test($exp->parse(SimpleStringBdParserInput::make('()')), TRUE);
-	//test($exp->parse(SimpleStringBdParserInput::make(')')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('((')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('(')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('(()')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('(())')), TRUE);
-	//test($exp->parse(SimpleStringBdParserInput::make('(())()')), TRUE);
-	//test($exp->parse(SimpleStringBdParserInput::make('')), TRUE);
-	//test($exp->parse(SimpleStringBdParserInput::make('((()()))')), TRUE);
-	//test($exp->parse(SimpleStringBdParserInput::make('((()))(())()')), TRUE);
-	//test($exp->parse(SimpleStringBdParserInput::make('((()))(())())')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('(((()))(())()')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('((()))((())()')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('((())))(())()')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('(')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('())')), FALSE);
-	//test($exp->parse(SimpleStringBdParserInput::make('(()()')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('()')), TRUE);
+	test($exp->parse(SimpleStringBdParserInput::make(')')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('((')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('(')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('(()')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('(())')), TRUE);
+	test($exp->parse(SimpleStringBdParserInput::make('(())()')), TRUE);
+	test($exp->parse(SimpleStringBdParserInput::make('')), TRUE);
+	test($exp->parse(SimpleStringBdParserInput::make('((()()))')), TRUE);
+	test($exp->parse(SimpleStringBdParserInput::make('((()))(())()')), TRUE);
+	test($exp->parse(SimpleStringBdParserInput::make('((()))(())())')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('(((()))(())()')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('((()))((())()')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('((())))(())()')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('(')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('())')), FALSE);
+	test($exp->parse(SimpleStringBdParserInput::make('(()()')), FALSE);
 	test($exp->parse(SimpleStringBdParserInput::make(str_repeat('()', 100))), TRUE);
-	print('promises constructed: '.$promiseCount."\n");
-	die();
 	test($exp->parse(SimpleStringBdParserInput::make('('.str_repeat('()', 100))), FALSE);
 	test($exp->parse(SimpleStringBdParserInput::make(str_repeat('()', 100).')')), FALSE);
 	test($exp->parse(SimpleStringBdParserInput::make('('.str_repeat('()', 100).')')), TRUE);
