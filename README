@@ -1,0 +1,28 @@
+This is a context-free grammar recognizer based on Brzozowski derivatives.
+
+See:
+
+M. Might, D. Darais, D. Spiewak. Parsing with Derivatives.
+http://matt.might.net/papers/might2011derivatives.pdf
+
+M. Might, D. Darais. Yacc is dead.
+http://arxiv.org/pdf/1010.5023v1.pdf
+
+R. Cox. Yacc is Not Dead.
+http://research.swtch.com/yaccalive
+
+J. A. Brzozowski. Derivatives of Regular Expressions.
+http://dl.acm.org/citation.cfm?id=321249&CFID=345356889&CFTOKEN=36956454
+
+The recognizer was written as a part of evaluation effort of alternatives to
+finite automata ad hockery and Picoparsec (other approaches under
+consideration were Earley and CYK).
+
+PHP is close to being the opposite of the ideal language for BD parsers.
+Inspecting the code should give you a good idea why, and running will
+demonstrate just how bad it is. I cannot guarantee correctness, but the
+implementation follows the methodology described in the papers closely.
+Initial results were bad enough I consider this a fascinating curiosity but
+not a viable option for parsing in production. (It's worth mentioning that
+upgrading this to an actual parser would also involve substantial effort -
+and further overhead.)
